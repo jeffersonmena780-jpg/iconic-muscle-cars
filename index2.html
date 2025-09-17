@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>The Iconic American Muscle Trio</title>
+
+
+<!-- Google Fonts -->
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+
+  --bg-a:#0f0f0f;
+
+  --bg-b:#000;
+
+  --muted:#bfbfbf;
+
+  --card-bg:rgba(255,255,255,0.04);
+
+  --card-border:rgba(255,255,255,0.06);
+
+  --shadow:0 8px 30px rgba(0,0,0,0.6);
+
+}
+
+/* Section colors */
+
+.camaro{--accent:#ff0000;--tint:rgba(255,0,0,0.04);}
+
+.mustang{--accent:#007bff;--tint:rgba(0,123,255,0.03);}
+
+.challenger{--accent:#ff8c00;--tint:rgba(255,140,0,0.03);}
+
+
+body{
+
+  margin:0;
+
+  font-family:'Poppins',sans-serif;
+
+  background:linear-gradient(180deg,var(--bg-a),var(--bg-b));
+
+  color:#eee;
+
+  line-height:1.6;
+
+  padding-bottom:4rem;
+
+}
+
+
+header{
+
+  text-align:center;
+
+  padding:3rem 1rem;
+
+  background:linear-gradient(135deg,#0d0d0d,#171717);
+
+  border-bottom:4px solid rgba(255,255,255,0.04);
+
+  box-shadow:0 6px 30px rgba(0,0,0,0.6);
+
+}
+
+header .title{
+
+  font-family:'Oswald',sans-serif;
+
+  color:#fff;
+
+  font-size:2.8rem;
+
+  letter-spacing:1px;
+
+  margin:0;
+
+}
+
+header .subtitle{
+
+  margin-top:.6rem;
+
+  color:var(--muted);
+
+  font-weight:300;
+
+}
+
+
+.wrap{max-width:1100px;margin:2rem auto;padding:0 1rem}
+
+
+.section{
+
+  position:relative;
+
+  padding:1.5rem 1rem 2.25rem;
+
+  margin:1rem 0 2rem;
+
+  border-radius:14px;
+
+  overflow:visible;
+
+}
+
+.section::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:0;
+
+  background:linear-gradient(180deg,transparent 0%,var(--tint) 100%);
+
+  border-radius:14px;
+
+  pointer-events:none;
+
+}
+
+.section-head{
+
+  position:relative;
+
+  z-index:1;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:1rem;
+
+  margin-bottom:1rem;
+
+  padding-bottom:.6rem;
+
+  border-bottom:1px solid rgba(255,255,255,0.03);
+
+}
+
+.section-title{
+
+  font-family:'Oswald',sans-serif;
+
+  color:var(--accent);
+
+  font-size:1.7rem;
+
+  letter-spacing:1px;
+
+  margin:0;
+
+}
+
+.section-sub{
+
+  color:var(--muted);
+
+  font-size:.95rem;
+
+  margin-top:.2rem;
+
+}
+
+
+.events{position:relative;z-index:1}
+
+.event{
+
+  background:var(--card-bg);
+
+  border:1px solid var(--card-border);
+
+  border-left:7px solid var(--accent);
+
+  border-radius:12px;
+
+  padding:1.5rem;
+
+  margin:1.25rem 0;
+
+  box-shadow:var(--shadow);
+
+  opacity:0;
+
+  transform:translateY(30px) scale(.995);
+
+  transition: all .55s cubic-bezier(.2,.9,.3,1);
+
+}
+
+.event.show{opacity:1;transform:none;}
+
+.event h3{
+
+  margin:0;
+
+  font-family:'Oswald',sans-serif;
+
+  color:var(--accent);
+
+  font-size:1.25rem;
+
+  letter-spacing:.5px;
+
+}
+
+.event .tag{color:var(--muted); font-size:.9rem; display:block; margin-top:.25rem;}
+
+.event p{margin:.55rem 0 0;color:#e7e7e7;font-weight:400;font-size:1rem;}
+
+
+.divider{height:18px;}
+
+
+@media(min-width:900px){
+
+  header .title{font-size:3.2rem;}
+
+  .section-title{font-size:1.9rem;}
+
+  .event h3{font-size:1.3rem;}
+
+}
+
+
+footer{
+
+  text-align:center;
+
+  padding:2rem 1rem;
+
+  color:#bdbdbd;
+
+  font-size:.95rem;
+
+  opacity:.95;
+
+}
+
+.accent-dot{
+
+  width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:.5rem;vertical-align:middle;box-shadow:0 3px 8px rgba(0,0,0,0.5);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="title">The Iconic American Muscle Trio</div>
+
+  <div class="subtitle">Full-generation histories of Camaro, Mustang, and Challenger — fun & readable!</div>
+
+</header>
+
+
+<main class="wrap">
+
+<!-- CAMARO -->
+
+<section class="section camaro">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="section-title"><span class="accent-dot" style="background:var(--accent)"></span>Chevrolet Camaro — All Generations</div>
+
+      <div class="section-sub">From 1967 to modern ZL1 — all the iconic generations.</div>
+
+    </div>
+
+  </div>
+
+  <div class="events">
+
+    <div class="event">
+
+      <h3>1st Gen (1967–1969)</h3>
+
+      <span class="tag">Birth & Rivalry</span>
+
+      <p>The Chevrolet Camaro was created in 1967 to directly compete with the Ford Mustang. It was offered with a range of engines from six-cylinder to big-block V8s. The RS, SS, and Z/28 trims quickly became popular, giving the Camaro its signature long-hood, short-deck design and establishing it as a serious competitor in the muscle car world.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>2nd Gen (1970–1981)</h3>
+
+      <span class="tag">Bigger & Sleeker</span>
+
+      <p>The second-generation Camaro featured lower, wider styling with European influences. V8 performance remained strong, and trims like Z/28 and SS continued to excite enthusiasts. While emissions regulations gradually reduced engine power, the Camaro maintained its aggressive muscle car image and became a staple of 1970s performance culture.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>3rd Gen (1982–1992)</h3>
+
+      <span class="tag">80s Tech</span>
+
+      <p>The third generation Camaro had a lighter chassis and improved aerodynamics. Electronic fuel injection became standard, and the IROC-Z trim emphasized handling. These changes helped the Camaro stay competitive on both streets and tracks during the 1980s, appealing to a younger, performance-focused audience.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>4th Gen (1993–2002)</h3>
+
+      <span class="tag">Smooth & Modern</span>
+
+      <p>The fourth generation Camaro introduced curvier styling and updated LT1 and LS-series V8 engines. Interiors and technology were improved, and performance remained strong. Despite these upgrades, declining coupe sales eventually led to the end of production in 2002.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>5th Gen (2010–2015)</h3>
+
+      <span class="tag">Retro Revival</span>
+
+      <p>After an eight-year hiatus, the Camaro returned in 2010 with retro-inspired styling and a modern chassis. Powerful engines and media appearances, such as the Transformers movies, brought the Camaro back into global attention. This generation successfully combined nostalgia with contemporary performance and technology.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>6th Gen (2016–present)</h3>
+
+      <span class="tag">Modern Muscle</span>
+
+      <p>The current Camaro is lighter, sharper, and equipped with advanced technology. The ZL1 supercharged V8 offers track-capable performance, while the styling pays homage to its heritage. It combines muscle car tradition with modern safety and infotainment features.</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- MUSTANG -->
+
+<section class="section mustang">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="section-title"><span class="accent-dot" style="background:var(--accent)"></span>Ford Mustang — All Generations</div>
+
+      <div class="section-sub">From 1964½ pony car to the newest global Mustang.</div>
+
+    </div>
+
+  </div>
+
+  <div class="events">
+
+    <div class="event">
+
+      <h3>1st Gen (1964½–1973)</h3>
+
+      <span class="tag">Invents Pony Car</span>
+
+      <p>The Ford Mustang launched the pony car category in 1964. It offered engines from an inline-six to powerful V8s, quickly gaining popularity. High-performance trims like the Shelby GT350 and GT500 set a benchmark for future Mustangs and helped establish a lasting performance legacy.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>2nd Gen (1974–1978)</h3>
+
+      <span class="tag">Fuel-Economy Era</span>
+
+      <p>The Mustang II was a smaller, lighter version designed to meet the fuel crisis demands. While it had less power than its predecessor, it preserved the Mustang brand during challenging market conditions and maintained a loyal fanbase.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>3rd Gen (1979–1993)</h3>
+
+      <span class="tag">Fox Platform</span>
+
+      <p>The third-generation Mustang used the Fox platform, which made it lighter and more tunable. V8 power returned, making it popular with modifiers and racers. This generation strengthened the Mustang’s position in the performance car scene.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>4th Gen (1994–2004)</h3>
+
+      <span class="tag">Refined Performance</span>
+
+      <p>The fourth generation Mustang improved interior quality and styling while keeping performance strong. Special models like the SVT Cobra and Cobra R offered track-capable performance straight from the factory, appealing to enthusiasts.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>5th Gen (2005–2014)</h3>
+
+      <span class="tag">Retro Styling</span>
+
+      <p>The 2005 Mustang brought back styling inspired by 1960s models. Modern engineering allowed for higher horsepower, and Shelby GT500 models offered exceptional performance. This generation combined nostalgia with contemporary driving experience.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>6th Gen (2015–2023)</h3>
+
+      <span class="tag">Global Tech</span>
+
+      <p>The sixth generation Mustang featured an independent rear suspension and a global platform. It offered modern performance editions, updated interiors, and technology upgrades, blending classic Mustang characteristics with modern requirements.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>7th Gen (2024–present)</h3>
+
+      <span class="tag">Newest Chapter</span>
+
+      <p>The latest Mustang updates powertrains, chassis, and digital systems to match contemporary standards. Heritage cues remain in the styling, while performance, safety, and technology meet modern expectations, ensuring it continues as an American icon.</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- CHALLENGER -->
+
+<section class="section challenger">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="section-title"><span class="accent-dot" style="background:var(--accent)"></span>Dodge Challenger — All Generations</div>
+
+      <div class="section-sub">Classic HEMIs to modern Hellcats & Demons.</div>
+
+    </div>
+
+  </div>
+
+  <div class="events">
+
+    <div class="event">
+
+      <h3>1st Gen (1970–1974)</h3>
+
+      <span class="tag">Mopar Muscle Arrives</span>
+
+      <p>The first-generation Dodge Challenger was introduced with bold styling and wide engine options, including the legendary 426 HEMI. Performance trims quickly made it a favorite among Mopar enthusiasts and solidified its place in the muscle car era.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>2nd Gen (1978–1983)</h3>
+
+      <span class="tag">Smaller & Softer</span>
+
+      <p>The second-generation Challenger was smaller and less powerful due to fuel economy and emission regulations. While it wasn’t as celebrated by hardcore fans, it kept the Challenger name alive and maintained a presence in the market.</p>
+
+    </div>
+
+    <div class="event">
+
+      <h3>3rd Gen (2008–present)</h3>
+
+      <span class="tag">Retro & Modern</span>
+
+      <p>The modern Challenger returned with retro styling inspired by the 1970s models, combined with modern engineering. High-performance trims like the Hellcat and Demon made it a powerful contender in straight-line performance, while daily usability remained solid.</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+© 2025 The Iconic American Muscle Trio — Clean aesthetic, fully readable
+
+</footer>
+
+
+<script>
+
+(function(){
+
+  const boxes = document.querySelectorAll('.event');
+
+  if('IntersectionObserver' in window){
+
+    const io = new IntersectionObserver((entries, obs)=>{
+
+      entries.forEach(e=>{
+
+        if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target); }
+
+      });
+
+    }, {threshold:0.12});
+
+    boxes.forEach(b=>io.observe(b));
+
+  } else {
+
+    function reveal(){ const t=window.innerHeight*0.88; boxes.forEach(b=>{ if(b.getBoundingClientRect().top<t) b.classList.add('show'); }) }
+
+    window.addEventListener('scroll',reveal); window.addEventListener('load',reveal); reveal();
+
+  }
+
+})();
+
+</script>
+
+</body>
+
+</html>
